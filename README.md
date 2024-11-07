@@ -68,7 +68,7 @@ classDiagram
 
 ### Endpoints
 
-- **POST /preenchimentos/{id_formulario}/preenchimentos**:
+**POST /preenchimentos/{id_formulario}/preenchimentos**:
  - Salvar um novo preenchimento de formulário.
  - Observe o identificador do formulário no caminho da URL (`id_formulario`) para determinar o formulário ao qual o preenchimento pertence.
  - A validação dos campos deve ser realizada conforme as regras especificadas na estrutura do formulário.
@@ -76,7 +76,7 @@ classDiagram
  - Retorne um erro 404 se o `id_formulario` não existir.
  - Retorne resposta 201 com o preenchimento salvo se o preenchimento for bem-sucedido.
 
-- **GET /preenchimentos/{id_formulario}/preenchimentos**:
+**GET /preenchimentos/{id_formulario}/preenchimentos**:
  - Recuperar todos os preenchimentos de um formulário específico.
  - Observe o identificador do formulário no caminho da URL (`id_formulario`) para determinar o formulário ao qual os preenchimentos pertencem.
  - Retorne um erro 404 se o `id_formulario` não existir.
