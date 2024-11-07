@@ -30,10 +30,7 @@ Cada campo possui os seguintes atributos:
 O campo `select` possui um atributo adicional:
 - `choices`: lista de opções disponíveis para seleção.
 
-Observe o diagrama abaixo para entender a estrutura dos formulários:
-![Diagrama de Classes](./docs/diagram.svg)
-
-Diagrama de Classes (formato Mermaid):
+Diagrama de Classes ([versão SVG](./docs/diagram.svg)):
 ```mermaid
 classDiagram
     Form "1" o-- "0..*" Field
@@ -85,7 +82,7 @@ classDiagram
  - Retorne um erro 404 se o `id_formulario` não existir.
  - Retorne resposta 200 com uma lista de preenchimentos do formulário especificado.
 
-Você pode encontrar mais detalhes sobre os endpoints na pasta `docs`, arquivo `api_spec.yaml`.
+Você pode encontrar mais detalhes sobre os endpoints no arquivo [docs/api_spec.yaml](./docs/api_spec.yaml).
 
 2. **Regras de Validação**:
 
