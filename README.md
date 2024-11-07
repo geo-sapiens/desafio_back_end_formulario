@@ -2,17 +2,17 @@
 
 Bem-vindo ao nosso desafio técnico! Estamos ansiosos para conhecer mais suas habilidades em desenvolvimento backend.
 
-**Objetivo do Desafio**: 
+## Objetivo do Desafio
 
 Desenvolver uma API com dois endpoints para lidar com o preenchimento de formulários dinâmicos, uma para salvar preenchimentos de formulários, e outra para recuperar os preenchimentos salvos de um formulário específico.
 
-**Sobre o Formulário**:
-
 Imagine um Google Forms, mas melhor, afinal, você vai implementar! 
 
-O formulário é dinâmico e pode ter diferentes campos, como campos de texto, campos numéricos e campos de seleção. Cada campo pode ser obrigatório ou opcional.
+## Sobre os formulários
 
-A definição dos formulários suportados encontra-se no arquivo `forms_definition.json`. Este arquivo contém uma lista de objetos, onde cada objeto representa um formulário. Lembre-se, neste desafio, a definição dos formulários deve ser lida a partir deste arquivo, e não de um banco de dados.
+Por se tratar de um sistema de coleta de dados, é necessário que os formulários sejam dinâmicos, ou seja, que possam ser criados e alterados sem a necessidade de alterar o código da aplicação. Para o desafio, suportaremos três tipos de campos: texto, numéricos e de seleção.
+
+A definição dos formulários suportados encontra-se no arquivo `forms_definition.json`. Este arquivo contém uma lista de objetos, onde cada objeto representa um formulário. Lembre-se, para este desafio, a definição dos formulários deve ser lida a partir deste arquivo, e não de um banco de dados.
 
 Cada formulário possui os seguintes atributos:
 - `id`: identificador único do formulário.
@@ -66,7 +66,7 @@ classDiagram
 
 ## Especificação da API
 
-1. **Endpoints**:
+### Endpoints
 
 - **POST /preenchimentos/{id_formulario}/preenchimentos**:
  - Salvar um novo preenchimento de formulário.
@@ -84,7 +84,7 @@ classDiagram
 
 Você pode encontrar mais detalhes sobre os endpoints no arquivo [docs/api_spec.yaml](./docs/api_spec.yaml).
 
-2. **Regras de Validação**:
+### Regras de validação
 
 De acordo com o tipo do campo e a propriedade `required`, as seguintes regras de validação devem ser aplicadas:
  - Quando um campo é `required`, ele deve ser preenchido, ou seja, não pode ser nulo ou vazio.
@@ -93,7 +93,8 @@ De acordo com o tipo do campo e a propriedade `required`, as seguintes regras de
  - O campo `select` deve ser uma string e deve ser uma das opções disponíveis no campo (verifique o atributo `choices`).
 
 
-3. **Instruções Adicionais**:
+## Instruções adicionais
+
  - Você deve implementar a API de acordo com a especificação fornecida.
  - Envie o código-fonte do projeto em um repositório Git (GitHub, GitLab, Bitbucket, etc.).
  - Não esqueça de incluir um README com informações sobre como configurar e rodar o projeto, especialmente se utilizar Docker.
