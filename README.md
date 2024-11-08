@@ -10,22 +10,22 @@ Imagine um Google Forms, mas melhor, afinal, você vai implementar!
 
 ## Sobre os formulários
 
-Por se tratar de um sistema de coleta de dados, é necessário que os formulários sejam dinâmicos, ou seja, que possam ser criados e alterados sem a necessidade de alterar o código da aplicação. Para o desafio, suportaremos três tipos de campos: texto, numéricos e de seleção.
+Por se tratar de um sistema de coleta de dados ao estilo Google Forms, é necessário que os formulários sejam dinâmicos, ou seja, que as estruturas dos formulários possam criadas/alteradas, sem a necessidade de alterar o código da aplicação. Para o desafio, suportaremos três tipos de campos nos formulários: texto, numérico e de seleção.
 
-A definição dos formulários suportados encontra-se no arquivo `forms_definition.json`. Este arquivo contém uma lista de objetos, onde cada objeto representa um formulário. Lembre-se, para este desafio, a definição dos formulários deve ser lida a partir deste arquivo, e não de um banco de dados.
+A definição dos formulários suportados encontra-se no arquivo `forms_definition.json`. Este arquivo contém uma lista de objetos, onde cada objeto representa um formulário. Para este desafio a definição dos formulários deve ser lida a partir deste arquivo, e não de um banco de dados.
 
 Cada formulário possui os seguintes atributos:
 - `id`: identificador único do formulário.
 - `name`: nome do formulário.
 - `fields`: lista de campos do formulário.
 
-A lista de campos de um formulário é um array de objetos, onde cada objeto representa um campo do formulário. 
+A lista de campos de um formulário é um array de objetos, onde cada objeto representa um campo do formulário (uma questão). 
 
 Cada campo possui os seguintes atributos:
 - `id`: identificador único do campo.
 - `label`: rótulo do campo.
 - `type`: tipo do campo (`text`, `number` ou `select`).
-- `required`: indica se o campo é obrigatório.
+- `required`: indica se o campo o preenchimento é obrigatório ou não.
 
 O campo `select` possui um atributo adicional:
 - `choices`: lista de opções disponíveis para seleção.
@@ -92,20 +92,20 @@ De acordo com o tipo do campo e a propriedade `required`, as seguintes regras de
  - O campo `number` deve ser um número (inteiro ou decimal, positivo ou negativo).
  - O campo `select` deve ser uma string e deve ser uma das opções disponíveis no campo (verifique o atributo `choices`).
 
-
 ## Instruções adicionais
 
  - Você deve implementar a API de acordo com a especificação fornecida.
+ - Os preenchimentos (respostas do formulário) devem ser armazenadas em um meio persistente (arquivo ou banco de dados).
  - Envie o código-fonte do projeto em um repositório Git (GitHub, GitLab, Bitbucket, etc.).
- - Não esqueça de incluir um README com informações sobre como configurar e rodar o projeto, especialmente se utilizar Docker.
- - A escolha de linguagem e framework é livre, porém, ao se tratar de um desafio para uma vaga de PHP, é recomendado que você utilize PHP para a implementação da API. Fique à vontade para usar qualquer stack que julgar mais adequada para o desafio.
- - Fique à vontade para demonstrar suas habilidades e tomar decisões técnicas que você considere apropriadas para resolver o desafio da melhor maneira possível.
+ - A escolha de linguagem e framework é livre, porém, ao se tratar de um desafio para uma vaga de PHP, é recomendado que você utilize PHP para a implementação da API. Fique à vontade para usar a stack que julgar mais adequada para o desafio.
+ - Fique à vontade também para demonstrar suas habilidades e tomar decisões técnicas que você considere apropriadas para resolver o desafio da melhor maneira possível.
  - Estamos buscando código limpo e bem estruturado, com boas práticas de desenvolvimento.
-- Testes automatizados (unitários ou funcionais) serão altamente apreciados.
-- Docker é uma ótima ferramenta para garantir que o projeto seja facilmente executado em diferentes ambientes.
+ - Testes automatizados (unitários ou funcionais) serão altamente apreciados.
+ - Docker é uma ótima ferramenta para garantir que o projeto seja facilmente executado em diferentes ambientes.
+ - Não esqueça de incluir um README com informações sobre como configurar e rodar o projeto.
 
 E, por último, mas não menos importante:
-- Caso você seja aprovado, você será compensado com o equivalente a **5 horas de desenvolvimento** pelo tempo dedicado à confecção do desafio.
+- Caso você seja contratado, você será compensado com o equivalente a **5 horas de desenvolvimento** pelo tempo dedicado à confecção do desafio.
 
 Esperamos que você se divirta com o desafio e estamos ansiosos para ver o que você consegue construir!
 
